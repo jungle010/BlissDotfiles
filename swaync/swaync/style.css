@@ -1,23 +1,21 @@
-@import "/home/jungle/.config/waybar/colourSheet.css";
+@import "./theme/rose-pine.css";
 
 * {
   all: unset;
-  font-family: Adwaita Sans;
-  transition: 0.1s;
+  font-family: Ububtu Nerd Font;
+  transition: 0.3s;
   font-size: 1rem;
 }
 
 .floating-notifications.background .notification-row {
-  margin-right: 20px;
-  margin-top: 20px
+  margin: 4px;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background-color: @mantle;
-  border-radius: 20px 10px 20px 20px;
-  color: @textwhite;
-  border: 5px solid @base;
-  padding: 0 0.5rem 0 0.5rem;
+  background-color: #191724;
+  color: #e0def4;
+  border: 1px solid @rose;
+  padding: 0 0.5rem;
 }
 
 .floating-notifications.background
@@ -31,7 +29,7 @@
   .notification-row
   .notification-background
   .notification.critical {
-  border: 1px solid @surface2;
+  border: 1px solid #eb6f92;
 }
 
 .floating-notifications.background
@@ -41,7 +39,7 @@
   .notification-content
   .summary {
   margin: 0.5rem 0 0.125rem 0.5rem;
-  color: @textwhite;
+  color: #e0def4;
   font-weight: bold;
 }
 
@@ -52,7 +50,7 @@
   .notification-content
   .body {
   margin: 0.125rem 0 0.5rem 0.5rem;
-  color: #cecece;
+  color: #908caa;
 }
 
 .floating-notifications.background
@@ -83,7 +81,7 @@
   > *:last-child
   > *
   .notification-action:hover {
-  background-color: @surface2;
+  background-color: @rose;
   color: @base;
 }
 
@@ -103,11 +101,10 @@
   .notification-background
   .close-button {
   margin: 0.5rem;
-  margin-right: 0rem;
-  padding: 0.5rem;
-  border-radius: 50;
-  color: @textwhite;
-  background-color: @surface2 /* Close button */
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  color: #e0def4;
+  background-color: #eb6f92;
 }
 
 .floating-notifications.background
@@ -115,7 +112,6 @@
   .notification-background
   .close-button:hover {
   color: #191724;
-  background-color: #ffffff;
 }
 
 .floating-notifications.background
@@ -125,39 +121,30 @@
   background-color: #ebbcba;
 }
 
-/*
------[Control Center]-----
-*/
-
-
 .control-center {
-  border-radius: 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  background-color: @base;
-  color: @textwhite;
-  padding: 20px 20px 20px 20px
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+  background-color: #191724;
+  color: #e0def4;
+  padding: 1rem;
+  border: 1px solid @rose;
 }
 
 .control-center .widget-title {
-  color: @textwhite;
+  color: #ebbcba;
   font-weight: bold;
-
 }
 
 .control-center .widget-title button {
-  border-radius: 20px;
-  color: @textwhite;
-  background-color: @mantle;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px
+  border-radius: 0.5rem;
+  color: #e0def4;
+  background-color: #1f1d2e;
+  border: 1px solid #6e6a86;
+  padding: 0.5rem;
 }
 
 .control-center .widget-title button:hover {
-  background-color: @surface2;
+  background-color: #26233a;
 }
 
 .control-center .widget-title button:active {
@@ -167,7 +154,7 @@
 .control-center .notification-row .notification-background {
   margin: 0.5rem 0;
   background-color: #1f1d2e;
-  color: @textwhite;
+  color: #e0def4;
   border: 1px solid #6e6a86;
 }
 
@@ -186,7 +173,7 @@
   .notification-background
   .notification
   .notification-content {
-  color: @textwhite;
+  color: #e0def4;
 }
 
 .control-center
@@ -196,7 +183,7 @@
   .notification-content
   .summary {
   margin: 0.5rem 0 0.125rem 1rem;
-  color: @textwhite;
+  color: #e0def4;
   font-weight: bold;
 }
 
@@ -269,16 +256,14 @@
 
 .control-center .notification-row .notification-background .close-button {
   margin: 0.5rem;
-  margin-right: 0rem;
-  padding: 0.5rem;
-  border-radius: 50;
-  color: @textwhite;
-  background-color: @surface2 /* Close button */
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  color: #e0def4;
+  background-color: #eb6f92;
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
   color: #191724;
-  background-color: #ffffff;
 }
 
 .control-center
@@ -312,7 +297,7 @@ trough {
 }
 
 .control-center-dnd {
-  margin: 10px 0px;
+  margin: 1rem 0;
   border-radius: 0.5rem;
 }
 
@@ -322,35 +307,30 @@ trough {
 }
 
 .widget-dnd {
-  color: @textwhite;
+  color: #908caa;
 }
 
 .widget-dnd > switch {
-  border-radius: 20px;
-  background: @base;
-  border: 1px solid @mantle;
+  border-radius: 0.5rem;
+  background: #26233a;
+  border: 1px solid #6e6a86;
 }
 
 .widget-dnd > switch:checked slider {
-  border-color: #ffffff;
-  background: #ffffff;
+  background: #31748f;
 }
 
 .widget-dnd > switch slider {
-  background: @mantle;
-  border-radius: 20px;
-  margin: 5px;
+  background: #6e6a86;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
 }
 
 .widget-buttons-grid {
-  font-size: x-large;
-  padding: 1px;
-  border-radius: 5px;
-  background: @mantle;
-}
-
-.widget-buttons-grid:hover {
-  background: @surface2
+  padding: 6px 2px;
+  border-radius: 4px;
+  background: @overlay;
+  margin: 0 0 0.25rem 0;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {

@@ -24,6 +24,7 @@
         "": "Harsh"
       },
       "separate-outputs": true,
+      "on-click": "exec .config/rofi/launchers/type-6/launcher.sh"
     },
     "hyprland/workspaces": {
       "format": "{icon}",

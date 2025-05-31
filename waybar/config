@@ -8,12 +8,13 @@
     ],
     "modules-center": [
       "hyprland/workspaces",
+      "custom/media"
     ],
+    
     "modules-right": [
     "pulseaudio",
     "network",
     "temperature",
-    "battery",
     "clock",
     "custom/notifications"
     ],
@@ -57,19 +58,6 @@
       "interval": 1,
       "on-click": "kitty htop"
     },
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-      "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "󱐋 {capacity}%",
-      "format-plugged": "󱐋 {capacity}%",
-      "format-alt": "{time} {icon}",
-      "format-icons": ["", "", "", "", ""],
-      "interval": 3
-    },
     "network": {
       "format-wifi": "  {signalStrength}%",
       "format-ethernet": "󰈀  {ifname}",
@@ -98,6 +86,13 @@
       "format": "󰍧",
       "on-click": "swaync-client -t -sw",
       "tooltip-format": "Notification Center"
-      }
+    },
+    "custom/media": {
+      "format": "󰎇 {}",
+      "exec": "playerctl metadata xesam:title 2>/dev/null || echo '󰗮'",
+      "on-click": "playerctl play-pause",
+      "interval": 1
     }
+  }
 }
+
